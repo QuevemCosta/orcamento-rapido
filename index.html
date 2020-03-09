@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" >
+	<title>Orçamento</title>
+
+	<link rel="stylesheet" type="text/css" href="src/css/style.css">
+</head>
+<body >
+	<header>
+		<h1>Speed Orçamentos</h1>
+	</header>
+	<main>
+		<section id="form" >
+			<form autocomplete="off" > 
+				<div>
+					<label for="quantidade">Quantidade</label>
+					<input type="number" id="quantidade" required name="quantidade">
+				</div>
+
+				<div>
+					<label for="descricao">Descrição</label>
+					<input type="text" id="descricao" name="descricao" required placeholder="Descrição" >
+				</div>
+
+				<div>
+					<label for="vunitario">Valor Unitario</label>
+					<input type="text" id="vunitario" required name="vunitario">
+				</div>
+
+				<div>
+					<label for="vtotal">Valor Total</label>
+					<input type="text" id="vtotal" disabled="" name="vtotal">
+				</div>
+				<div id="msg-erro">
+					<p>Verifique se todos os campos estão devidamente preenchidos</p>
+				</div>
+				<div class="btn-grup">
+					<button type="reset">Limpar</button>
+					<button type="button" id="btn-add"  onclick="adicionaItem()" >Adicionar</button>
+				</div>
+			</form>
+		</section>
+
+		<section id="preview-orcamento">
+			<div id="menu-tabela" >
+				<button type="button">Salvar</button>
+				<button type="button">Importar PDF</button>
+			</div>
+			<table>
+				<tbody>
+					<thead>
+						<tr>
+							<th>Quantidade</th>
+							<th>Descrição</th>
+							<th>R$ Unitario</th>
+							<th>R$ Total</th>
+						</tr>
+						<tbody id="data-table">
+							
+						</tbody>
+					</thead>
+				</tbody>
+			</table>
+			<div class="total">
+				<p>Total R$:<span id="VtodalOrcamento" ></span></p>
+			</div>		
+		</section>
+	</main>
+
+</body>
+<script type="text/javascript" src="src/javascript/script.js" ></script>
+<script type="text/javascript" src="src/javascript/caucula-total-orcamento.js" ></script>
+<script type="text/javascript" src="src/javascript/btn-deleta-item.js" ></script>
+</html>
