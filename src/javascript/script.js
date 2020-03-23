@@ -87,8 +87,8 @@ function adicionaItem(){
 			btn_delet.setAttribute('class','btn_delet')
 			btn_delet.setAttribute('title','Remover item')
 
-			dataQuantidade.appendChild(quantidade)
 			dataDescricao.appendChild(descricao)
+			dataQuantidade.appendChild(quantidade)
 			dataVunitario.appendChild(vunitario)
 			dataVtoal.appendChild(vtotal)
 			dataVtoal.setAttribute('class','totalItem')
@@ -98,8 +98,8 @@ function adicionaItem(){
 		}
 			let tr = document.createElement('tr')
 
-			tr.appendChild(dataQuantidade)
 			tr.appendChild(dataDescricao)
+			tr.appendChild(dataQuantidade)
 			tr.appendChild(dataVunitario)
 			tr.appendChild(dataVtoal)
 			tr.appendChild(btn_delet)

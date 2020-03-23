@@ -8,7 +8,7 @@
 header{
 	width: 100%;
 	height:80px;
-	background-color: rgb(113, 241, 145);
+	background-color: rgb(68, 71, 69);
 	margin-bottom:10px;
 }
 h1{
@@ -96,13 +96,12 @@ main{
 	border-radius: 5px;
 	text-align: center;
 	background-color: #fff;
-	table-layout: colapse;
 }
 
-#preview-orcamento table thead tr :first-child{
+/*#preview-orcamento table thead tr :first-child{
 	width: 20px;
 	line-height: 40px;
-}
+}*/	
 #preview-orcamento table tbody tr{
 	background-color: #eee;
 	line-height: 30px;
@@ -148,12 +147,19 @@ main{
 }
 #preview-orcamento #menu-tabela button{
 	padding: 10px;
+	width: 100px;
 	border: 1px;
 	border-radius: 5px;
 	background-color: #fff;
 	font-size: 16px;
 	cursor: pointer;
 	color: #444;
+	outline: none;
+}
+#preview-orcamento #menu-tabela button:hover{
+	font-size: 18px;
+	color: #eee;
+	background-color: #333;
 }
 @media screen and (max-width: 720px){
 	h1{
