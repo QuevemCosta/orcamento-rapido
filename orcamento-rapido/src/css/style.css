@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css?family=Orbitron&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Jaldi&display=swap');
+*{
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	outline:0;
+}
+button{
+	cursor:pointer;
+
+}
+header{
+	width: 100%;
+	height:80px;
+	background-color: #17B55F;
+	margin-bottom:10px;
+}
+h1{
+	font-family: 'Orbitron', sans-serif;
+	font-size:2.2em;
+	color:#eeff; 
+	line-height:2.5em;
+	margin-left: 20px;
+}
+main{
+	width: 100%;
+	background-color: #fff;
+	padding: 30px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+}
+#form{
+	padding: 15px;
+	width: 40%;
+	background-color: #DDDDEE;
+	border-radius: 3px;
+
+}
+#form label{
+	display: block;
+	font-family: 'Jaldi', sans-serif;
+	font-size: 1.3em;
+}
+#form input,#form button{
+	padding: 5px;
+	width: 100%;
+	margin-bottom: 10px;
+	border-radius: 3px;
+	border: 1px solid #6d7474;
+	font-family: 'Jaldi', sans-serif;
+	font-size: 16px;
+	outline: none;
+}#form #vtotal{
+	cursor: text;
+	color: #17B55F;
+}
+#form .btn-grup{
+	width: 95%;
+	margin: auto;
+}
+#form button{
+	width: 49%;
+	color: #ffee;
+	background-color: #9dcf6b;
+	cursor: pointer;
+	outline: none;
+	font-weight:550;
+	font-size:18px;
+}
+#form button[type='reset']{
+	background-color: #eb786e;
+}
+
+#form #msg-erro{
+	display: none;
+	color: #fff;
+	background-color: #EB786E;
+	padding: 10px;
+	border-radius: 5px;
+	width: 80%;
+	margin: auto;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+#preview-orcamento{
+	width: 60%;
+	max-height: 420px;
+	margin-left: 20px;
+	background: #DDDDEE;
+	padding: 15px;
+	border-radius: 10px;
+	overflow-y: auto;
+	font-family: 'Jaldi', sans-serif;
+
+}
+#preview-orcamento table{
+	width: 100%;
+	padding: 10px;
+}
+#preview-orcamento table{
+	color: #444;
+	border-radius: 5px;
+	text-align: center;
+	background-color: #fff;
+}
+
+#preview-orcamento table tbody tr{
+	background-color: #eee;
+	line-height: 30px;
+}
+#preview-orcamento table tbody tr:nth-child(2n){
+	background-color: #fff;
+}
+
+#preview-orcamento .total{
+	text-align: end;
+	width: 100%;
+	background-color: #555;
+}
+#preview-orcamento div p{
+	line-height: 35px;
+	color:#fff;
+	font-weight: 500;
+	font-size: 1.5em;
+}
+#preview-orcamento div span{
+	min-width: 50px;
+	display: inline-block;
+	margin-left: 15px;
+	margin-right: 30px;
+}
+#preview-orcamento .btn_delet{
+	color:#F78181;
+	background-color:#666;
+	width: 100%;
+	padding: 10px;
+	border: none;
+	font-weight: 900;
+	cursor: pointer;
+	outline: none;
+}
+#preview-orcamento .btn_delet:hover{
+	background-color: #F78181;
+	color: #fff;
+}
+#preview-orcamento #menu-tabela{
+	width: 100%;
+	margin-bottom: 10px;
+}
+#preview-orcamento #menu-tabela button{
+	padding: 10px;
+	width: auto;
+	border: 1px;
+	border-radius: 5px;
+	background-color: #fff;
+	font-size: 16px;
+	cursor: pointer;
+	color: #444;
+	outline: none;
+}
+#preview-orcamento #menu-tabela button:hover{
+	font-size: 18px;
+	color: #eee;
+	background-color: #333;
+}
+
+
+
+@media screen and (max-width: 720px){
+	h1{
+		font-size: 1.5rem;
+		line-height: 30px;
+		text-align: center;
+	}
+	main{
+		flex-direction: column;
+		padding: 10px;
+	}
+	#form{
+		width: 100%;
+	}
+	#preview-orcamento{
+		width: 95%;
+		margin-left: 0;
+		margin-top: 20px;
+	}
+}
+
+
+#dados-empresa{display:none;}
+#dados-empresa >div{
+
+	border:0;
+	border-radius:3px;
+	box-shadow:-5px 10px 20px 15px #555;
+	background:#dde;
+	padding:90px;
+	display:block;
+	position:fixed;
+	top:100px;
+	width:60%;
+	left:50%;
+	transform:translateX(-50%);
+	justify-content: center;	
+}
+
+#dados-empresa >div form input{
+	padding:8px;
+	margin-top:8px;
+	border:1px solid #ddd;
+	border-radius:3px;
+	width:auto;
+}
+#dados-empresa > div  form >div{
+	width:90%;
+	margin:20px auto auto auto;
+}
+#dados-empresa > div  form >div button{
+	padding:8px;
+	margin:alto;
+	width:40%;
+	font-size:16px;
+	background-color:9dcf6b;
+	border:0;
+	border-radius:3px;
+	background:#eb786e;
+	color:#fef;
+}
+#dados-empresa > div  form input[type=file]{
+	color:transparent;
+	width:100px;
+	background-color:#fff;
+	padding:0;
+	width:80px;
+	height:80px;
+	border:none;
+	display:block;
+	
+}
+#dados-empresa > div  form input[type=file]-webkit-file-upload-button {
+	visibility:hidden;
+	border:none;
+}
+
+#dados-empresa > div  form input[type=file]::before{
+  content: '';
+  color: #eb786e;
+  display: inline-block;
+  background-image: url('../../src/img/log.png');
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  background-size:80%;
+  background-position: top rigt;
+  background-attachment: ;
+  border: none;
+  border-radius: 3px;
+  padding: 50px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  margin:0;
+}
+
+#dados-empresa > div  form >div button + button{
+	background:#9dcf6b;
+}
+

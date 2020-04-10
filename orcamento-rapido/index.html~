@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!--
+	vim: et ts=2 sw=2 ft=html:"
+-->
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1" >
+		<title>Orçamento</title>
+
+		<link rel="stylesheet" type="text/css" href="src/css/style.css">
+		<link rel="stylesheet" type="text/css" href="src/css/printable.css">
+
+	</head>
+	<body >
+		<header>
+			<h1>Speed Orçamentos</h1>
+		</header>
+		<main>
+			<section id="form" >
+				<form autocomplete="off" > 
+					<div>
+						<label for="quantidade">Quantidade</label>
+						<input type="number" id="quantidade"  required name="quantidade">
+					</div>
+
+				<div>
+					<label for="descricao">Descrição</label>
+					<input type="text" id="descricao" name="descricao" required placeholder="Descrição" >
+				</div>
+
+					<div>
+						<label for="vunitario">Valor Unitario</label>
+						<input type="text" id="vunitario" required name="vunitario">
+					</div>
+
+					<div>
+						<label for="vtotal">Valor Total</label>
+						<input type="text" id="vtotal" disabled="" name="vtotal">
+					</div>
+					<div id="msg-erro">
+						<p>Verifique se todos os campos estão devidamente preenchidos</p>
+					</div>
+					<div class="btn-grup">
+						<button type="reset">Limpar</button>
+						<button type="button" id="btn-add"  onclick="adicionaItem()" >Adicionar</button>
+					</div>
+				</form>
+			</section>	
+
+			<section id="preview-orcamento">
+				<div id="menu-tabela" >
+					<button type="button" id="geraPdf" >Salvar</button>
+				</div>
+					<div id="printable" >
+						<table>
+							<div id="cabecalio" >
+								<div id="dados-impresa" >
+									<img src="src/img/log.png" alt="">
+									<h2>Quevem Costa Da Cruz -(93) 99115-5519</h2>
+									<h3>CPF/CNPJ: 036.308.372-39</h3>
+									<h3>Travessa João Gato, 801 - São José Operario</h3>
+									<h3>68270-000 - Oriximiná - Pará</h3>
+									<hr>
+									<h2>Orçamento</h2>
+								</div>
+							</div>
+							<tbody>
+								<thead>
+									<tr>
+										<th>Descrição</th>
+										<th >Quantidade</th>
+										<th>R$ Unitario</th>
+										<th>R$ Total</th>
+										<th></th>
+									</tr>
+									<tbody id="data-table">
+
+									</tbody>
+								</thead>
+							</tbody>
+
+						</table>
+
+						<div class="total">
+							<p>Total R$:<span id="VtodalOrcamento" ></span></p>
+						</div>
+						<div id="final" class="print" >
+							<hr>
+							<h2>Informaçãoes Adicionais</h2>
+							<p>Forma de Pagamneto: <span>Prcela 1 +2</span></p>
+							<p>Desconto R$: <span>30.00</span></p>
+							<div class="responsavel" >
+								<hr>
+								<h2>Responsavel</h2>
+							</div>
+
+						</div>
+					</div>	
+			</section>
+		</main>
+
+	</body>
+	<script type="text/javascript" src="src/javascript/script.js" ></script>
+	<script type="text/javascript" src="src/javascript/caucula-total-orcamento.js" ></script>
+	<script type="text/javascript" src="src/javascript/btn-deleta-item.js" ></script>
+	<script type="text/javascript" src="src/javascript/geradoePdf.js" ></script>
+</html>

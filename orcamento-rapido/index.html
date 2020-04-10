@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" >
+	<title>Orçamento</title>
+
+	<link rel="stylesheet" type="text/css" href="src/css/style.css">
+	<link rel="stylesheet" type="text/css" href="src/css/printable.css">
+
+</head>
+<body >
+	<header>
+		<h1>Speed Orçamentos</h1>
+	</header>
+	<main>
+		<section id="form" >
+			<form autocomplete="off" > 
+				<div>
+					<label for="quantidade">Quantidade</label>
+					<input type="number" id="quantidade"  required name="quantidade">
+				</div>
+
+			<div>
+				<label for="descricao">Descrição</label>
+				<input type="text" id="descricao" name="descricao" required placeholder="Descrição" >
+			</div>
+
+				<div>
+					<label for="vunitario">Valor Unitario</label>
+					<input type="text" id="vunitario" required name="vunitario">
+				</div>
+
+				<div>
+					<label for="vtotal">Valor Total</label>
+					<input type="text" id="vtotal" disabled="" name="vtotal">
+				</div>
+				<div id="msg-erro">
+					<p>Verifique se todos os campos estão devidamente preenchidos</p>
+				</div>
+				<div class="btn-grup">
+					<button type="reset">Limpar</button>
+					<button type="button" id="btn-add"  onclick="adicionaItem()" >Adicionar</button>
+				</div>
+			</form>
+		</section>	
+
+		<section id="preview-orcamento">
+			<div id="menu-tabela" >
+				<button type="button" id="geraPdf" >Add Empresa</button>
+				<button type="button" id="limpaEmpresa" >Limpar Empresa</button>
+				<button type="button" onclick="print()" >Imprimir</button>
+			</div>
+				<div id="printable" >
+					<table>
+						<div id="cabecalio" >
+						</div>
+						<tbody>
+							<thead>
+								<tr>
+									<th>Descrição</th>
+									<th >Quantidade</th>
+									<th>R$ Unitario</th>
+									<th>R$ Total</th>
+									<th></th>
+								</tr>
+								<tbody id="data-table">
+
+								</tbody>
+							</thead>
+						</tbody>
+
+					</table>
+
+					<div class="total">
+						<p>Total R$:<span id="VtodalOrcamento" ></span></p>
+					</div>
+					<div id="final" class="print" >
+						
+						<h2>Informaçãoes Adicionais</h2>
+						<p>Forma de Pagamneto: <span>Prcela 1 +2</span></p>
+						<p>Desconto R$: <span>30.00</span></p>
+						<div class="responsavel" >
+							<hr>
+							<h2>Responsavel</h2>
+						</div>
+
+					</div>
+				</div>	
+		</section>
+		<section>
+		<div id="dados-empresa">
+			<div>
+				<h2>Dados da empresa</h2>
+				<div id="previewLogo" ></div>
+				<form enctype="multpart/form-data" >
+					
+					<input 
+						type="file"
+						name="logo"
+						id="inputLogo"
+						accept=".png, .jpg, .jpeg"
+					 />
+					 
+					<input 
+						type="text"
+						placeholder="Nome"
+						name="nome"
+					 />
+					 <input 
+						type="text"
+						placeholder="Telefne"
+						name="telefone"
+					 />
+					<input 
+						type="email"
+						placeholder="E-mail"
+						name="email"
+					 />
+
+					<input 
+						type="text"
+						placeholder="CPF/CNPJ"
+						name="cnpj"
+					 />
+					
+					<input 
+						type="text"
+						placeholder="CEP"
+						name="cep"
+					 />
+					<input 
+						type="text"
+						placeholder="Rua"
+						name="rua"
+					 />
+					<input 
+						type="text"
+						placeholder="N&ordm;"
+						name="numero"
+					 />
+					<input 
+						type="bairro"
+						placeholder="Bairro"
+						name="bairro"
+					 />
+					<input 
+						type="text"
+						placeholder="Cidade"
+						name="cidade"
+					 />
+					<input 
+						type="text"
+						placeholder="uf"
+						name="uf"
+					 />
+					 <div>
+						 <button 
+							type="button" 
+							id="cancelaDadosEmpresa" 
+							>
+								Cancelar
+							</button>
+						 <button 
+							type="button"
+							id="btnFinalizar"
+							 >
+								Finalizar
+							 </button>
+					 </div>
+					 
+				</form>
+				</div>
+		</div>
+		</section>
+	</main>
+<script type="text/javascript" src="src/javascript/script.js" ></script>
+<script type="text/javascript" src="src/javascript/caucula-total-orcamento.js" ></script>
+<script type="text/javascript" src="src/javascript/btn-deleta-item.js" ></script>
+<script type="text/javascript" src="src/javascript/geradoePdf.js" ></script>
+<script type="text/javascript" src="src/javascript/preview-logo.js" ></script>
+
+</body>
+
+
+</html>

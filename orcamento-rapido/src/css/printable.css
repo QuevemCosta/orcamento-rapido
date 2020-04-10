@@ -1,0 +1,122 @@
+.print{
+    display: none;
+}
+  #printable>#cabecalio #dados-impresa .logo{
+        width: 150px;
+        margin: auto;
+    }
+#previewLogo .logo{
+    width:130px;
+    position:absolute;
+    right:50px;
+    top:80px;
+    padding:10px;
+    border: 1px solid grey;
+    border-radius:3px;
+    background:#fff;
+
+}
+#dados-impresa{
+    font-size:12px;
+    text-align: center;
+}
+#dados-impresa h2,#dados-impresa h3{
+    line-height:25px;
+}
+#dados-impresa:nth-last-child{
+    font-size:18px;
+}
+@media print {
+
+    body * {
+    visibility: hidden;
+    }
+    @page {
+        margin: 1cm;
+        }
+    #printable, #printable * {
+    visibility: visible;
+    width: 100%;
+    }
+    #printable {
+    position: absolute;
+    left: 0;
+    top: 0;
+    }
+    #printable>#cabecalio{
+        width: 100%;
+    }
+    #printable>#cabecalio #dados-impresa .logo{
+        width: 150px;
+        margin: auto;
+    }
+    #printable>#cabecalio #dados-impresa{
+        width: 60%;
+        margin: auto;
+        text-align: center;
+    }
+    #cabecalio #dados-impresa h2,#printable>#cabecalio #dados-impresa h3{
+        color: grey;
+        line-height:25px;
+    }
+    #printable table{
+        border-collapse: collapse;
+        height: 100%;
+    }
+    #printable table,#printable th,#printable tr,#printable td{
+        border: 1px solid #000;
+        padding: 0;
+        text-align: center;
+    }
+    #printable hr{
+        margin:20px 0;
+    }
+    #printable tr td:last-child{
+        background-color: black;
+    }
+    #printable tr td,#printable tr th{
+        text-align: center;
+        padding:2px 10px;
+    } 
+    #printable button{
+        visibility: hidden;
+    }
+    #preview-orcamento .total{
+        border:1px solid #444;
+        background-color: #eee;
+        
+    }
+    #preview-orcamento .total p{
+        color: #333;
+        font-size: 40px;
+        margin: 10px;
+
+    }
+    #preview-orcamento .total #VtodalOrcamento{
+        display: inline;
+        color: #333;
+        font-size: 40px;
+
+    }
+    #preview-orcamento .print{
+        display: block;
+        color: #333;
+
+    }
+    #preview-orcamento .print p{
+        color: #444;
+        font-weight: 500;
+    }
+    #preview-orcamento .print p span{
+        display: inline;
+    }
+    #preview-orcamento .print .responsavel{
+        width: 10cm;
+        margin: auto;
+        text-align: center;
+    }
+    #preview-orcamento .print .responsavel hr{
+        margin: 30px 0 5px 0;
+        text-decoration: #000;
+    }
+}
