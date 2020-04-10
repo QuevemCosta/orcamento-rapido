@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html lang="pt-br">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1" >
@@ -21,10 +20,10 @@
 					<input type="number" id="quantidade"  required name="quantidade">
 				</div>
 
-				<div>
-					<label for="descricao">Descrição</label>
-					<input type="text" id="descricao" name="descricao" required placeholder="Descrição" >
-				</div>
+			<div>
+				<label for="descricao">Descrição</label>
+				<input type="text" id="descricao" name="descricao" required placeholder="Descrição" >
+			</div>
 
 				<div>
 					<label for="vunitario">Valor Unitario</label>
@@ -47,59 +46,147 @@
 
 		<section id="preview-orcamento">
 			<div id="menu-tabela" >
-				<button type="button" id="geraPdf" >Salvar</button>
+				<button type="button" id="geraPdf" >Add Empresa</button>
+				<button type="button" id="limpaEmpresa" >Limpar Empresa</button>
+				<button type="button" onclick="print()" >Imprimir</button>
 			</div>
-			<div id="printable" >
-				<table>
-					<div id="cabecalio" >
-						<div id="dados-impresa" >
-							<img src="src/img/log.png" alt="">
-							<h2>Quevem Costa Da Cruz -(93) 99115-5519</h2>
-							<h3>CPF/CNPJ: 036.308.372-39</h3>
-							<h3>Travessa João Gato, 801 - São José Operario</h3>
-							<h3>68270-000 - Oriximiná - Pará</h3>
-							<hr>
-							<h2>Orçamento</h2>
+				<div id="printable" >
+					<table>
+						<div id="cabecalio" >
 						</div>
-					</div>
-					<tbody>
-						<thead>
-							<tr>
-								<th>Descrição</th>
-								<th >Quantidade</th>
-								<th>R$ Unitario</th>
-								<th>R$ Total</th>
-								<th></th>
-							</tr>
-							<tbody id="data-table">
-								
-							</tbody>
-						</thead>
-					</tbody>
-					
-				</table>
-			
-					<div class="total">
-					<p>Total R$:<span id="VtodalOrcamento" ></span></p>
-				</div>
-				<div id="final" class="print" >
-					<hr>
-					<h2>Informaçãoes Adicionais</h2>
-					<p>Forma de Pagamneto: <span>Prcela 1 +2</span></p>
-					<p>Desconto R$: <span>30.00</span></p>
-					<div class="responsavel" >
-						<hr>
-						<h2>Responsavel</h2>
-					</div>
+						<tbody>
+							<thead>
+								<tr>
+									<th>Descrição</th>
+									<th >Quantidade</th>
+									<th>R$ Unitario</th>
+									<th>R$ Total</th>
+									<th></th>
+								</tr>
+								<tbody id="data-table">
 
+								</tbody>
+							</thead>
+						</tbody>
+
+					</table>
+
+					<div class="total">
+						<p>Total R$:<span id="VtodalOrcamento" ></span></p>
+					</div>
+					<div id="final" class="print" >
+						
+						<h2>Informaçãoes Adicionais</h2>
+						<p>Forma de Pagamneto: <span>Prcela 1 +2</span></p>
+						<p>Desconto R$: <span>30.00</span></p>
+						<div class="responsavel" >
+							<hr>
+							<h2>Responsavel</h2>
+						</div>
+
+					</div>
+				</div>	
+		</section>
+		<section>
+		<div id="dados-empresa">
+			<div>
+				<h2>Dados da empresa</h2>
+				<div id="previewLogo" ></div>
+				<form enctype="multpart/form-data" >
+					<label>
+						<input 
+							type="file"
+							name="logo"
+							id="inputLogo"
+							accept=".png, .jpg, .jpeg"
+							style="display:none;	"
+						 />
+					</label>
+					<button 
+						type="button" 
+						id="btnLogo">
+						<img class="logo" src="src/img/log.png" />
+					</button>
+ 
+					<input 
+						type="text"
+						placeholder="Nome"
+						name="nome"
+					 />
+					 <input 
+						type="text"
+						placeholder="Telefne"
+						name="telefone"
+					 />
+					<input 
+						type="email"
+						placeholder="E-mail"
+						name="email"
+					 />
+
+					<input 
+						type="text"
+						placeholder="CPF/CNPJ"
+						name="cnpj"
+					 />
+					
+					<input 
+						type="text"
+						placeholder="CEP"
+						name="cep"
+					 />
+					<input 
+						type="text"
+						placeholder="Rua"
+						name="rua"
+					 />
+					<input 
+						type="text"
+						placeholder="N&ordm;"
+						name="numero"
+					 />
+					<input 
+						type="bairro"
+						placeholder="Bairro"
+						name="bairro"
+					 />
+					<input 
+						type="text"
+						placeholder="Cidade"
+						name="cidade"
+					 />
+					<input 
+						type="text"
+						placeholder="uf"
+						name="uf"
+					 />
+					 <div>
+						 <button 
+							type="button" 
+							id="cancelaDadosEmpresa" 
+							>
+								Cancelar
+							</button>
+						 <button 
+							type="button"
+							id="btnFinalizar"
+							 >
+								Finalizar
+							 </button>
+					 </div>
+					 
+				</form>
 				</div>
-			</div>	
+		</div>
 		</section>
 	</main>
-
-</body>
 <script type="text/javascript" src="src/javascript/script.js" ></script>
 <script type="text/javascript" src="src/javascript/caucula-total-orcamento.js" ></script>
 <script type="text/javascript" src="src/javascript/btn-deleta-item.js" ></script>
 <script type="text/javascript" src="src/javascript/geradoePdf.js" ></script>
+<script type="text/javascript" src="src/javascript/preview-logo.js" ></script>
+
+</body>
+
+
 </html>

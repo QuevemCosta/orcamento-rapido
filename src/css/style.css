@@ -4,11 +4,16 @@
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
+	outline:0;
+}
+button{
+	cursor:pointer;
+
 }
 header{
 	width: 100%;
 	height:80px;
-	background-color: rgb(68, 71, 69);
+	background-color: #17B55F;
 	margin-bottom:10px;
 }
 h1{
@@ -20,7 +25,7 @@ h1{
 }
 main{
 	width: 100%;
-	background-color: #ffff;
+	background-color: #fff;
 	padding: 30px;
 	display: flex;
 	flex-direction: row;
@@ -30,8 +35,8 @@ main{
 #form{
 	padding: 15px;
 	width: 40%;
-	background-color: #ddd;
-	border-radius: 10px;
+	background-color: #DDDDEE;
+	border-radius: 3px;
 
 }
 #form label{
@@ -40,17 +45,17 @@ main{
 	font-size: 1.3em;
 }
 #form input,#form button{
-	padding: 7px;
+	padding: 5px;
 	width: 100%;
 	margin-bottom: 10px;
-	border-radius: 5px;
-	border: 1px solid #eee;
+	border-radius: 3px;
+	border: 1px solid #6d7474;
 	font-family: 'Jaldi', sans-serif;
-	font-size: 18px;
+	font-size: 16px;
 	outline: none;
 }#form #vtotal{
 	cursor: text;
-	color: #31B404;
+	color: #17B55F;
 }
 #form .btn-grup{
 	width: 95%;
@@ -58,16 +63,21 @@ main{
 }
 #form button{
 	width: 49%;
-	color: #fff;
-	background-color: #999999;
+	color: #ffee;
+	background-color: #9dcf6b;
 	cursor: pointer;
 	outline: none;
-
+	font-weight:550;
+	font-size:18px;
 }
+#form button[type='reset']{
+	background-color: #eb786e;
+}
+
 #form #msg-erro{
 	display: none;
 	color: #fff;
-	background-color: #F78181;
+	background-color: #EB786E;
 	padding: 10px;
 	border-radius: 5px;
 	width: 80%;
@@ -80,7 +90,7 @@ main{
 	width: 60%;
 	max-height: 420px;
 	margin-left: 20px;
-	background: #ddd;
+	background: #DDDDEE;
 	padding: 15px;
 	border-radius: 10px;
 	overflow-y: auto;
@@ -98,10 +108,6 @@ main{
 	background-color: #fff;
 }
 
-/*#preview-orcamento table thead tr :first-child{
-	width: 20px;
-	line-height: 40px;
-}*/	
 #preview-orcamento table tbody tr{
 	background-color: #eee;
 	line-height: 30px;
@@ -144,10 +150,11 @@ main{
 #preview-orcamento #menu-tabela{
 	width: 100%;
 	margin-bottom: 10px;
+	text-decoration:center;
 }
 #preview-orcamento #menu-tabela button{
 	padding: 10px;
-	width: 100px;
+	width: auto;
 	border: 1px;
 	border-radius: 5px;
 	background-color: #fff;
@@ -155,15 +162,23 @@ main{
 	cursor: pointer;
 	color: #444;
 	outline: none;
+	display:inline-block;
 }
 #preview-orcamento #menu-tabela button:hover{
 	font-size: 18px;
 	color: #eee;
 	background-color: #333;
 }
+
+
+
 @media screen and (max-width: 720px){
+	header{
+		padding-top:15px;
+	}
 	h1{
 		font-size: 1.5rem;
+		
 		line-height: 30px;
 		text-align: center;
 	}
@@ -179,4 +194,73 @@ main{
 		margin-left: 0;
 		margin-top: 20px;
 	}
+	#preview-orcamento #menu-tabela{text-align:center;}
+	#preview-orcamento #menu-tabela button{
+		margin-top:10px;
+	}
 }
+
+
+#dados-empresa{display:none;}
+#dados-empresa >div{
+	text-align:center;
+	border:0;
+	border-radius:3px;
+	box-shadow:-5px 10px 20px 15px #555;
+	background:#dde;
+	padding:60px;
+	display:block;
+	position:absolute;
+	top:100px;
+	width:60%;
+	left:50%;
+	transform:translateX(-50%);
+	justify-content: center;	
+}
+
+#dados-empresa >div form input{
+	padding:8px;
+	margin-top:8px;
+	border:1px solid #ddd;
+	border-radius:3px;
+}
+#dados-empresa > div  form >div{
+	width:90%;
+	margin:20px auto auto auto;
+}
+#dados-empresa > div  form >div button{
+	padding:8px;
+	margin:alto;
+	width:40%;
+	font-size:16px;
+	background-color:9dcf6b;
+	border:0;
+	border-radius:3px;
+	background:#eb786e;
+	color:#fef;
+}
+#dados-empresa > div  form >div button + button{
+	background:#9dcf6b;
+}
+
+@media screen and (max-width: 1024px){
+	#dados-empresa >div{
+	width:90%;
+	padding:20px;
+
+	}
+}
+@media screen and (max-width: 360px){
+	#dados-empresa >div input{width:90%;}
+	#dados-empresa >div >div{
+		width:90%;
+	}
+	#dados-empresa >div button{
+	width:100%;
+	display:block;
+	margin:10px auto;
+	text-align:center;
+	
+	}
+}
+

@@ -1,5 +1,35 @@
+#btnLogo{
+    display:block;
+    margin:auto;
+    padding:10px;
+    background-color:#fff;
+    border:none;
+    border-radius:3px;
+}
+#btnLogo img{
+    width:130px;
+
+}
+
+
+
 .print{
     display: none;
+}
+  #printable>#cabecalio #dados-impresa .logo{
+        width: 150px;
+        margin: auto;
+    }
+
+#dados-impresa{
+    font-size:12px;
+    text-align: center;
+}
+#dados-impresa h2,#dados-impresa h3{
+    line-height:25px;
+}
+#dados-impresa:nth-last-child{
+    font-size:18px;
 }
 @media print {
 
@@ -21,7 +51,7 @@
     #printable>#cabecalio{
         width: 100%;
     }
-    #printable>#cabecalio img{
+    #printable>#cabecalio #dados-impresa .logo{
         width: 150px;
         margin: auto;
     }
@@ -32,6 +62,7 @@
     }
     #cabecalio #dados-impresa h2,#printable>#cabecalio #dados-impresa h3{
         color: grey;
+        line-height:25px;
     }
     #printable table{
         border-collapse: collapse;

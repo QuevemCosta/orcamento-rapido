@@ -21,11 +21,11 @@ function caulaValorTotalItem(){
 		document.getElementById('btn-add').style.backgroundColor="#eee"
 	}else{
 		document.getElementById('btn-add').removeAttribute('disabled','')
-		document.getElementById('btn-add').style.backgroundColor="#444"
+		document.getElementById('btn-add').style.backgroundColor="#9dcf6b"
 		document.getElementById('vunitario').style.backgroundColor="#CEF6CE"
 		
 		vtotal = (quantidade * vunitario)
-		return vtotal.toFixed(2)
+		return vtotal.toFixed(2)//toLocaleString('pt-BR',{style:'currency',currency:'BRL'})
 	}
 		
 
@@ -66,7 +66,7 @@ function adicionaItem(){
 
 		document.getElementById("msg-erro").style.display="none"
 			
-		//console.log(input)
+		console.log(input)
 		for(i=0;i<input.length;i++){
 			//console.log(input[i].value)
 
